@@ -1,8 +1,21 @@
 import React from 'react';
-import LoginPage from '../../containers/LoginPage';
+import { Container, Jumbotron, Button } from 'react-bootstrap';
 
-export default function App() {
+function App() {
   return (
-    <LoginPage />
+    <Container>
+      <Jumbotron>
+        <h1>Alpaca OAuth</h1>
+        <p>
+          This is a simple tutorial on how to connect to Google Firebase
+        </p>
+        <p>
+          <Button variant="primary">Conenct to Alpaca</Button>
+        </p>
+      </Jumbotron>
+    </Container>
+   
   );
 }
+
+export default App;
