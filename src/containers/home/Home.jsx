@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../components/app/header/header';
-import NewsSearch from '../../components/app/news/NewsSearch';
+import News from '../../components/app/news/News';
 import Positions from '../../components/app/positions/Positions';
 import Search from '../../components/app/search/Search';
 import Ticker from '../../components/app/ticker/Ticker';
@@ -10,7 +10,7 @@ function Home() {
     <div>
       <Header/>
       <Ticker/>
-      <NewsSearch />
+      <News />
       <Search/>
       <Positions/>
     </div>

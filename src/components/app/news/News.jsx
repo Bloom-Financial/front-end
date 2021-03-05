@@ -3,7 +3,7 @@ import ArticleList from './ArticleList';
 import Search from './Search';
 import { findArticles } from '../../../services/newsApi';
 
-export default class NewSearch extends Component {
+export default class News extends Component {
   state = {
     search: 'stocks',
     articles: [],

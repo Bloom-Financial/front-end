@@ -1,10 +1,10 @@
 import React from 'react';
 import { screen, render, fireEvent, waitFor } from '@testing-library/react';
-import NewsSearch from './NewsSearch';
+import News from './News';
 
-describe('NewsSearch tests', () => {
+describe('News tests', () => {
   it('searches for articles when a search term is typed', () => {
-    render(<NewsSearch />);
+    render(<News />);
 
     const searchInput = screen.getByPlaceholderText('Search here...');
     fireEvent.input(searchInput, {
