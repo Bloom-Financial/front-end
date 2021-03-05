@@ -4,7 +4,7 @@ import UserPaperPosition from './UserPaperPosition';
 
 const UserPaperPositionList = ({ paperPositions }) => {
   const paperPositionElements = paperPositions.map((paperPosition) => (
-    <li key={paperPosition.asset_id}>
+    <li className={StyleSheet.container} key={paperPosition.asset_id}>
       <UserPaperPosition {...paperPosition} />
     </li>
   ));
