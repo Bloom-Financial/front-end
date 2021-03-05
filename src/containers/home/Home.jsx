@@ -10,7 +10,7 @@ function Home() {
     <div>
       <Header/>
       <Ticker/>
-      <News/>
+      <News />
       <Search/>
       <Positions/>
     </div>
