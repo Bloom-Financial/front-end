@@ -1,13 +1,17 @@
 import React from 'react';
-import Login from '../components/app/login/Login';
-import { getAuthorizationCode } from '../services/LoginService';
+
+import { useAlpacaRedirect } from '../state/authProvider';
+import styles from './LoginPage.css';
+
+
 
 export default function LoginPage() {
-  getAuthorizationCode();
+  const redirectToAlpaca = useAlpacaRedirect();
 
+ 
   return (
-    <div>
-      <Login />
+    <div className={styles.log}>
+      <button onClick={redirectToAlpaca}>C o n t i n u e</button>
     </div>
   );
 }

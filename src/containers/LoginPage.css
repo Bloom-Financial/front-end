@@ -1,0 +1,24 @@
+body {
+
+    background-color: #174141;
+    background-image: url("/src/assets/landingbg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+
+button {
+    margin-left: 45.5%;
+    margin-top: 33%;
+    height: 50px;
+    width: 150px;
+    font-size: 1.2em;
+    box-shadow: 3px 3px black;
+    background-color: rgb(28, 122, 107);
+    border-radius: 50%;
+    font-weight: bold;
+    text-shadow: 1px 1px gray;
+    font-style: oblique;
+
+}
