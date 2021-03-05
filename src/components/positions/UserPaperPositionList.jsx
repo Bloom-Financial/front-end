@@ -11,6 +11,13 @@ const UserPaperPositionList = ({ paperPositions }) => {
   return <ul>{paperPositionElements}</ul>;
 };
 
-UserPaperPositionList.propTypes = {};
-
+UserPaperPositionList.propTypes = {
+  paperPositions: PropTypes.arrayOf(
+    PropTypes.shape({
+      symbol: PropTypes.string.isRequired,
+      qty: PropTypes.string.isRequired,
+      market_value: PropTypes.string.isRequired,
+    })
+  ),
+};
 export default UserPaperPositionList;
