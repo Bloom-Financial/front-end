@@ -1,4 +1,4 @@
-export const getUserPortfolio = () => {
+export const getUserPaperPositions = () => {
   return fetch('https://paper-api.alpaca.markets/v2/positions', {
     method: 'GET',
     headers: {
