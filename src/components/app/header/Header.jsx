@@ -1,7 +1,7 @@
 import React, { setState } from 'react';
 import PropTypes from 'prop-types';
 
-const Header = ({ username, profile, onSubmit }) => {
+const Header = ({ username, onSubmit }) => {
   // const [username, setUsername ] = setState('');
   // const [profile, setProfile ] = setState('');
 
@@ -11,9 +11,6 @@ const Header = ({ username, profile, onSubmit }) => {
         <input id="username" 
           type="text" 
           value={username}>username: {username} </input>
-        <input id="profile"
-          type="text"
-          value={profile}>profile:{profile}</input>
         <button onSubmit={onSubmit}>Update Profile</button>   
       </form>
       <button onSubmit={onSubmit}>login out</button>
@@ -23,7 +20,6 @@ const Header = ({ username, profile, onSubmit }) => {
 
 Header.propTypes = {
   username: PropTypes.string.isRequired,
-  profile: PropTypes.string.isRequired,
   onSubmit: PropTypes.func.isRequired
 };
 
