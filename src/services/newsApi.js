@@ -1,4 +1,4 @@
-const process = require('dotenv');
+require('dotenv').config();
 
 export const findArticles = (search) => {
   return fetch(
