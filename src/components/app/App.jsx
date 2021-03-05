@@ -1,10 +1,29 @@
 import React from 'react';
+import { 
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+import LoginPage from '../../containers/LoginPage';
+import { AuthProvider } from '../../state/authProvider';
+
+
 
 
 function App() {
+
   return (
 
-   <h1>hi</h1>
+    <Router>
+      <AuthProvider>
+        <Switch>
+          <Route exact path = "/" component={LoginPage}/>
+
+  
+        </Switch>
+      </AuthProvider>
+    </Router>
+    
   );
 }
 
