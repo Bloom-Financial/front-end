@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import UserPaperPosition from './UserPaperPosition';
+import styles from './UserPaperPositionList.css';
 
 const UserPaperPositionList = ({ paperPositions }) => {
   const paperPositionElements = paperPositions.map((paperPosition) => (
-    <li key={paperPosition.asset_id}>
+    <li className={styles.container} key={paperPosition.asset_id}>
       <UserPaperPosition {...paperPosition} />
     </li>
   ));
