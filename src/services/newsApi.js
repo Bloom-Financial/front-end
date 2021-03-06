@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 export const findArticles = (search) => {
   return fetch(
     `https://newsapi.org/v2/everything?q=${search}&

@@ -1,0 +1,22 @@
+.container {
+  height: 19vh;
+  width: 5vw;
+  background-color: green;
+  color: #fff;
+  border: solid 2px black;
+  margin: 4px;
+  position: relative;
+  right: -75vw;
+  color: aliceblue;
+}
+.symbol {
+  font-size: 0.5rem;
+}
+
+.qty {
+  font-size: 0.5rem;
+}
+
+.value {
+  font-size: 0.5rem;
+}
