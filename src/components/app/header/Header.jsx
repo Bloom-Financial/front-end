@@ -1,25 +1,24 @@
-import React, { setState } from 'react';
+import React, { setState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const Header = ({ username, onSubmit }) => {
-  // const [username, setUsername ] = setState('');
-  // const [profile, setProfile ] = setState('');
+const Header = ({ onSubmit }) => {
+  const [username, setUsername] = setState('');
 
   return (
     <>
       <form>
         <input id="username" 
           type="text" 
-          value={username}>username: {username} </input>
+          value={username}> </input>
         <button onSubmit={onSubmit}>Update Profile</button>   
       </form>
       <button onSubmit={onSubmit}>login out</button>
     </>
   );
 };
-
+// username: {username}  username: PropTypes.string.isRequired,
 Header.propTypes = {
-  username: PropTypes.string.isRequired,
+
   onSubmit: PropTypes.func.isRequired
 };
 
