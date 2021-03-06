@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import UserPaperPositionList from '../components/positions/UserPaperPositionList';
 import { getUserPaperPositions } from '../services/alpacaGetUserPortfolioAPI';
+import { PositionChart } from '../components/positions/positionsChart';
 
 function UserPaperPositions() {
   const [paperPositions, setPaperPositions] = useState([]);
@@ -16,6 +17,7 @@ function UserPaperPositions() {
   if (loading) return <h1>Loading...</h1>;
   return (
     <>
+      <PositionChart />
       <UserPaperPositionList paperPositions={paperPositions} />
     </>
   );

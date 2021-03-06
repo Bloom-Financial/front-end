@@ -4,9 +4,9 @@ import styles from './UserPaperPosition.css';
 
 const UserPaperPosition = ({ symbol, qty, market_value }) => (
   <dd className={styles.container}>
-    <h1 className={styles.symbol}>{symbol}</h1>
-    <h2>{qty}</h2>
-    <h2>{market_value}</h2>
+    <h1 className={styles.symbol}>Stock: {symbol}</h1>
+    <h2 className={styles.qty}>Qty: {qty}</h2>
+    <h2 className={styles.value}>Market Value: {market_value}</h2>
   </dd>
 );
 
