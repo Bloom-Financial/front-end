@@ -1,19 +1,24 @@
 export const getTickers = () => {
+ 
   return fetch(
-    `https://api.polygon.io/v1/meta/exchanges?&
-    apiKey=xAwYuU4o13Zl6SYv1piHrpap_00ywWIE`
+    `https://api.polygon.io/v2/reference/tickers?sort=ticker&perpage=50&page=1&apiKey=xAwYuU4o13Zl6SYv1piHrpap_00ywWIE`
   )
-
     .then((res) => res.json())
+    
     .then(({ tickers }) =>
+  
       tickers.map((ticker) => ({
-        id: ticker.id,
-        type: ticker.type,
-        market: ticker.market,
+      
+        ticker: ticker.ticker,
         name: ticker.name,
-        mic: ticker.mic,
-        tape: ticker.tape,
-        code: ticker.code
+        market: ticker.market,
+        locale: ticker.locale,
+        type: ticker.type,
+        currency: ticker.currency,
+        active: ticker.active,
+        primaryExch: ticker.primaryExch,
+        url: ticker.url
+  
 
       })));
 };

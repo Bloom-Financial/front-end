@@ -4,7 +4,8 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import LoginPage from '../../containers/LoginPage';
+//import LoginPage from '../../containers/LoginPage';
+import TickerDetailPage from '../../containers/TickerDetailPage';
 import { AuthProvider } from '../../state/authProvider';
 
 
@@ -17,8 +18,9 @@ function App() {
     <Router>
       <AuthProvider>
         <Switch>
-          <Route exact path = "/" component={LoginPage}/>
-
+          {/* <Route exact path = "/" component={LoginPage}/> */}
+          <Route exact path = "/" component={TickerDetailPage}/>
+          
   
         </Switch>
       </AuthProvider>
