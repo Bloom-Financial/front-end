@@ -23,7 +23,8 @@ function Home({ location }) {
       <Ticker/>
       <News />
       <Search/> */}
-      <UserPagePositions />
+      {/* <UserPagePositions /> */}
+      I am here
     </div>
   );
 }

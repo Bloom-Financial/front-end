@@ -2,7 +2,7 @@ import React, { setState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const Header = ({ onSubmit }) => {
-  const [username, setUsername] = setState('');
+  // const [username, setUsername] = setState('');
 
   return (
     <>
