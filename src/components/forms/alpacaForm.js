@@ -1,7 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-function alpacaForm({ symbol, quantity, side, onSubmit }) {
+function AlpacaForm({ symbol, quantity, side }) {
+  const handleSubmit = (e) => {
+    e.target.value;
+  };
+
   return (
     <div>
       <form>
@@ -11,17 +14,10 @@ function alpacaForm({ symbol, quantity, side, onSubmit }) {
           <option value="buy">Buy</option>
           <option value="sell">Sell</option>
         </select> 
-        <button onSubmit={onSubmit}>Submit</button>
+        <button onSubmit={handleSubmit}>Submit</button>
       </form>
     </div>
   );
 }
 
-alpacaForm.propTypes = {
-  symbol: PropTypes.string.isRequired,
-  quantity: PropTypes.string.isRequired,
-  side: PropTypes.string.isRequired,
-  onSubmit: PropTypes.func.isRequired
-};
-
-export default alpacaForm;
+export default AlpacaForm;

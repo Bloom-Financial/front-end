@@ -15,7 +15,7 @@ export default function alpacaReducer(state, action) {
       ...state, qty: action.payload
     };
     case 'side' : return {
-      ...state, qty: action.payload
+      ...state, side: action.payload
     };
   }
 }
