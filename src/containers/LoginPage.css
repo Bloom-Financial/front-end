@@ -1,14 +1,12 @@
 body {
-
     background-color: #174141;
-    background-image: url("/src/assets/landingbg.png");
+    /* background-image: url("/src/assets/landingbg.png"); */
     background-repeat: no-repeat;
     background-size: 100% 100%;
-
 }
 
 
-button {
+.logButton {
     margin-left: 45.5%;
     margin-top: 33%;
     height: 50px;
@@ -20,5 +18,4 @@ button {
     font-weight: bold;
     text-shadow: 1px 1px gray;
     font-style: oblique;
-
 }

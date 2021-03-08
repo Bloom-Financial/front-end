@@ -12,7 +12,8 @@ function Home() {
       <Ticker/>
       <News />
       <Search/> */}
-      <UserPagePositions />
+      {/* <UserPagePositions /> */}
+      I am here
     </div>
   );
 }
