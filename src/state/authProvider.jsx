@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 const AuthContext = React.createContext(null);
@@ -7,14 +7,10 @@ const AuthContext = React.createContext(null);
 export const AuthProvider = ({ children }) => {
   const [accessToken, setAccessToken] = useState();
 
-  const redirectToAlpaca = () => {
+  useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
-    // eslint-disable-next-line max-len
-    if (!accessToken && !code) {
-      window.location =
-        'https://app.alpaca.markets/oauth/authorize?response_type=code&client_id=edb6dea4ea1d646cd3bb3f82667f33df&redirect_uri=http://localhost:7891/home&scope=%20trading';
-
+    if(code){
       fetch('http://localhost:7890/api/v1/auth/token', {
         method: 'Post',
         headers: { 'content-type': 'application/json' },
@@ -23,8 +19,20 @@ export const AuthProvider = ({ children }) => {
         .then((res) => res.json())
         .then(({ accessToken }) => {
           setAccessToken(accessToken);
+          console.log(accessToken, 'accesstoken');
         });
-    } else useHistory().push('/home');
+    }
+
+  }, []);
+
+
+  const redirectToAlpaca = () => {
+ 
+    // eslint-disable-next-line max-len
+    // if (!accessToken && !code) {
+    window.location =
+        'https://app.alpaca.markets/oauth/authorize?response_type=code&client_id=edb6dea4ea1d646cd3bb3f82667f33df&redirect_uri=http://localhost:7891/home&scope=account:write%20trading';
+
   };
   return (
     <AuthContext.Provider value={{ accessToken, redirectToAlpaca }}>
