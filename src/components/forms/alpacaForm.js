@@ -11,7 +11,7 @@ function alpacaForm({ symbol, quantity, side, onSubmit }) {
           <option value="buy">Buy</option>
           <option value="sell">Sell</option>
         </select> 
-        <button onSubmit={onSubmit}></button>
+        <button onSubmit={onSubmit}>Submit</button>
       </form>
     </div>
   );
