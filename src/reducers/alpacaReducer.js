@@ -1,7 +1,7 @@
 export const initialState = {
   symbol: '',
   qty: '',
-  side: '',
+  side: 'buy',
   type: 'market',
   timeInForce: 'day'
 };
