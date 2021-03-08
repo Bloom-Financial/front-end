@@ -1,3 +1,5 @@
+import { SYMBOL, QTY, SIDE } from '../actions/alpacaActions';
+
 export const initialState = {
   symbol: '',
   qty: '',
@@ -8,13 +10,13 @@ export const initialState = {
 
 export default function alpacaReducer(state, action) {
   switch(action.type) {
-    case 'symbol' : return {
+    case SYMBOL : return {
       ...state, symbol: action.payload
     };
-    case 'qty' : return {
+    case QTY : return {
       ...state, qty: action.payload
     };
-    case 'side' : return {
+    case SIDE : return {
       ...state, side: action.payload
     };
   }
