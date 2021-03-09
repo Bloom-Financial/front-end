@@ -5,21 +5,11 @@ import UserPagePositions from '../../containers/UserPaperPositions';
 // import Search from '../../components/app/search/Search';
 // import Ticker from '../../components/app/ticker/Ticker';
 // import { useParams } from 'react-router-dom';
-function Home({ location }) {
-  const token = new URLSearchParams(location.search).get('code');
-
-  const [accessToken, setAccessToken] = useState('');
-  useEffect(() => {
-    setAccessToken(token);
-  }),
-    [];
-
+function Home() {
   return (
     <div>
       <Header />
-      {/* <Ticker/>
-      <News />
-      <Search/> */}
+
       <UserPagePositions />
     </div>
   );
