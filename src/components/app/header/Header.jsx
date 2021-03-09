@@ -1,26 +1,36 @@
-import React, { setState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import { createUser } from '../../../services/userApi';
 
-const Header = ({ onSubmit }) => {
-  // const [username, setUsername] = setState('');
+const Header = () => {
+  const [username, setUsername] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    createUser().then((username) => {
+      setUsername(username);
+    });
+  };
+  console.log(username);
+
+  const handleLogOut = () => {
+    window.location.assign('/');
+    setUsername('');
+  };
 
   return (
     <>
-      <form>
-        <input id="username" 
-          type="text" 
-          value={username}> </input>
-        <button onSubmit={onSubmit}>Update Profile</button>   
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="username">Enter username</label>
+        <input
+          id="username"
+          type="text"
+          onChange={({ target }) => setUsername(target.value)}
+        />
+        <button>Update Profile</button>
       </form>
-      <button onSubmit={onSubmit}>login out</button>
+      <button onClick={handleLogOut}>log out</button>
     </>
   );
 };
-// username: {username}  username: PropTypes.string.isRequired,
-Header.propTypes = {
-
-  onSubmit: PropTypes.func.isRequired
-};
 
 export default Header;
-

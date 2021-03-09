@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import Header from '../../components/app/header/header';
+import Header from '../../components/app/header/Header';
 // import News from '../../components/app/news/News';
 import UserPagePositions from '../../containers/UserPaperPositions';
 // import Search from '../../components/app/search/Search';
@@ -14,12 +14,10 @@ function Home({ location }) {
   }),
     [];
 
-  console.log(token, 'home page');
-
   return (
     <div>
-      {/* <Header/>
-      <Ticker/>
+      <Header />
+      {/* <Ticker/>
       <News />
       <Search/> */}
       <UserPagePositions />
