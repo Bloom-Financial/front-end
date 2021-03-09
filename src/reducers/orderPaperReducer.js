@@ -1,5 +1,3 @@
-import { BUY, SELL } from '../actions/orderPaperActions';
-
 export const initialState = {
   buy: '',
   sell: '',
