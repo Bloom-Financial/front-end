@@ -12,13 +12,11 @@ function Home({ location }) {
   useEffect(() => {
     setAccessToken(token);
   }),
-  [];
-
-  console.log(token, 'home page');
+    [];
 
   return (
     <div>
-      <Header/>
+      <Header />
       {/* <Ticker/>
       <News />
       <Search/> */}

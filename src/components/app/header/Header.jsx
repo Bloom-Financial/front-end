@@ -1,34 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import { getUser } from '../../../services/userApi';
+import React, { useState } from 'react';
+import { createUser } from '../../../services/userApi';
 
 const Header = () => {
   const [username, setUsername] = useState('');
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-  };
-
-  useEffect(() => {
-    getUser().then((username) => {
+    createUser().then((username) => {
       setUsername(username);
-      
     });
-  }, []);
+  };
+  console.log(username);
+
+  const handleLogOut = () => {
+    window.location.assign('/');
+    setUsername('');
+  };
 
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input id="username" 
-          type="text" 
-          value={username}
+        <label htmlFor="username">Enter username</label>
+        <input
+          id="username"
+          type="text"
           onChange={({ target }) => setUsername(target.value)}
         />
-        <button>Update Profile</button>   
+        <button>Update Profile</button>
       </form>
-      <button onSubmit={handleSubmit}>log out</button>
+      <button onClick={handleLogOut}>log out</button>
     </>
   );
 };
 
 export default Header;
-
