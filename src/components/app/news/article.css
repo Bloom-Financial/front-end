@@ -1,0 +1,24 @@
+.articleTitle { grid-area: title; }
+.articleImg { grid-area: img; }
+.articleDes { grid-area: description; }
+
+.articleContainer {
+  display: grid;
+  grid-template-areas:
+    'title title title title title title'
+    'img img img description description description'
+    'img img img description description description'
+    'img img img description description description'
+    'img img img description description description';
+  grid-gap: 10px;
+  background-color: #1b6e79;
+  padding: 10px;
+  width: 500px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: aliceblue;
+}
+
+.articleImg {
+  padding-top: 20px;
+  width:200px;
+}

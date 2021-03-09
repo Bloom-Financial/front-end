@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import style from './article.css';
 
-
-const Article = ({ title, url, image }) => (
+const Article = ({ title, url, description, img }) => (
   <a href={url}>
-    <figure>
-      <img src={image} alt={title} />
-      <figcaption>{title}</figcaption>
+    <figure className={style.articleContainer}>
+      <p className={style.articleTitle}>{title}</p>
+      <img className={style.articleImg} src={img} alt={title} />
+      <p className={style.articleDesc}>{description}</p>
     </figure>
   </a>
 );
@@ -14,7 +15,8 @@ const Article = ({ title, url, image }) => (
 Article.propTypes = {
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  image: PropTypes.string,
+  description: PropTypes.string.isRequired,
+  img: PropTypes.string
 };
 
 export default Article;
