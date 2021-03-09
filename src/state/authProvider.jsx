@@ -7,7 +7,7 @@ const AuthContext = React.createContext(null);
 
 export const AuthProvider = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, initialState);
-  const [accessToken, setAccessToken] = useState();
+  const [accessToken, setAccessToken] = useState('');
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -45,9 +45,9 @@ export const useAlpacaRedirect = () => {
   return redirectToAlpaca;
 };
 
-export const useAccessToken = (selector) => {
-  const { state } = useContext(AuthContext);
-  return selector(state);
+export const useAccessToken = () => {
+  const { accessToken } = useContext(AuthContext);
+  return accessToken;
 };
 
 export const useDispatch = () => {
