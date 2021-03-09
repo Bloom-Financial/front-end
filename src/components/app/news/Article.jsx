@@ -5,7 +5,7 @@ import style from './article.css';
 const Article = ({ title, url, description, img }) => (
   <a href={url}>
     <figure className={style.articleContainer}>
-      <p className={style.articleTitle}>{title}</p>
+      <h3 className={style.articleTitle}>{title}</h3>
       <img className={style.articleImg} src={img} alt={title} />
       <p className={style.articleDesc}>{description}</p>
     </figure>
