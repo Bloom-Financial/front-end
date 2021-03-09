@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 const URL = 'http://localhost:7890/user/user';
 
-export const user = (username) => {
+export const getUser = (username) => {
   const data = { username };
 
   return fetch(`${URL}`,  {
