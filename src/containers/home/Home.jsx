@@ -4,18 +4,17 @@ import React, { useState, useEffect } from 'react';
 import UserPagePositions from './UserPaperPositions';
 // import Search from '../../components/app/search/Search';
 // import Ticker from '../../components/app/ticker/Ticker';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 function Home({ location }) {
-  const code = new URLSearchParams(location.search).get('code');
+  const token = new URLSearchParams(location.search).get('code');
 
-
-  const [token, setToken] = useState('');
+  const [accessToken, setAccessToken] = useState('');
   useEffect(() => {
-    setToken(code);
-  }), [];
-  
+    setAccessToken(token);
+  }),
+    [];
 
-  console.log(code, 'home page');
+  console.log(token, 'home page');
 
   return (
     <div>
@@ -23,8 +22,7 @@ function Home({ location }) {
       <Ticker/>
       <News />
       <Search/> */}
-      {/* <UserPagePositions /> */}
-      I am here
+      <UserPagePositions />
     </div>
   );
 }
