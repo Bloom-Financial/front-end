@@ -9,7 +9,12 @@ const UserPaperPositionList = ({ paperPositions }) => {
       <UserPaperPosition {...paperPosition} />
     </li>
   ));
-  return <ul>{paperPositionElements}</ul>;
+  return (
+    <>
+      <h1 className={styles.title}>Your Positions:</h1>
+      <ul>{paperPositionElements}</ul>
+    </>
+  );
 };
 
 UserPaperPositionList.propTypes = {

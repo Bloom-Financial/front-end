@@ -1,16 +1,17 @@
 /* eslint-disable max-len */
-import React, { useState, useContext, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useReducer, useState, useContext, useEffect } from 'react';
+import authReducer, { initialState } from '../reducers/authReducer';
 
 const AuthContext = React.createContext(null);
 
 export const AuthProvider = ({ children }) => {
-  const [accessToken, setAccessToken] = useState();
+  const [state, dispatch] = useReducer(authReducer, initialState);
+  const [accessToken, setAccessToken] = useState('');
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
-    if(code){
+    if (code) {
       fetch('http://localhost:7890/api/v1/auth/token', {
         method: 'Post',
         headers: { 'content-type': 'application/json' },
@@ -19,23 +20,19 @@ export const AuthProvider = ({ children }) => {
         .then((res) => res.json())
         .then(({ accessToken }) => {
           setAccessToken(accessToken);
-          console.log(accessToken, 'accesstoken');
         });
     }
-
   }, []);
 
-
   const redirectToAlpaca = () => {
- 
     // eslint-disable-next-line max-len
-    // if (!accessToken && !code) {
     window.location =
-        'https://app.alpaca.markets/oauth/authorize?response_type=code&client_id=edb6dea4ea1d646cd3bb3f82667f33df&redirect_uri=http://localhost:7891/home&scope=account:write%20trading';
-
+      'https://app.alpaca.markets/oauth/authorize?response_type=code&client_id=edb6dea4ea1d646cd3bb3f82667f33df&redirect_uri=http://localhost:7891/home&scope=account:write%20trading';
   };
   return (
-    <AuthContext.Provider value={{ accessToken, redirectToAlpaca }}>
+    <AuthContext.Provider
+      value={{ state, dispatch, accessToken, redirectToAlpaca }}
+    >
       {children}
     </AuthContext.Provider>
   );
@@ -43,4 +40,14 @@ export const AuthProvider = ({ children }) => {
 export const useAlpacaRedirect = () => {
   const { redirectToAlpaca } = useContext(AuthContext);
   return redirectToAlpaca;
+};
+
+export const useAccessToken = () => {
+  const { accessToken } = useContext(AuthContext);
+  return accessToken;
+};
+
+export const useDispatch = () => {
+  const { dispatch } = useContext(AuthContext);
+  return dispatch;
 };
