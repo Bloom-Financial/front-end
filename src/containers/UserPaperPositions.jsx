@@ -8,14 +8,15 @@ import AlpacaForm from '../components/forms/AlpacaForm';
 function UserPaperPositions() {
   const [paperPositions, setPaperPositions] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [accessToken, setAccessToken] = useState('');
 
   useEffect(() => {
-    getUserPaperPositions().then((res) => {
+    getUserPaperPositions(setAccessToken(accessToken)).then((res) => {
       setPaperPositions(res), setLoading(false);
     });
   }, []);
 
-  if(loading) return <h1>Loading...</h1>;
+  if (loading) return <h1>Loading...</h1>;
   return (
     <>
       <AlpacaForm />
