@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import React, { useReducer, useState, useContext, useEffect } from 'react';
 import authReducer, { initialState } from '../reducers/authReducer';
-// import { useHistory } from 'react-router-dom';
 
 const AuthContext = React.createContext(null);
 
@@ -21,14 +20,12 @@ export const AuthProvider = ({ children }) => {
         .then((res) => res.json())
         .then(({ accessToken }) => {
           setAccessToken(accessToken);
-          console.log(accessToken, 'accessToken');
         });
     }
   }, []);
 
   const redirectToAlpaca = () => {
     // eslint-disable-next-line max-len
-    // if (!accessToken && !code) {
     window.location =
       'https://app.alpaca.markets/oauth/authorize?response_type=code&client_id=edb6dea4ea1d646cd3bb3f82667f33df&redirect_uri=http://localhost:7891/home&scope=account:write%20trading';
   };
