@@ -1,5 +1,3 @@
-import { accessToken } from '../state/authProvider';
-
 export const getUserPaperPositions = (accessToken) => {
   return fetch('https://paper-api.alpaca.markets/v2/positions', {
     method: 'GET',
