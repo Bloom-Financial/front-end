@@ -3,14 +3,16 @@ import PropTypes from 'prop-types';
 
 function Ticker({ quotes }) {
   return (
-    <div>
-      {quotes}   
-    </div>
+    <>
+      {    quotes.symbol   }
+    
+      {quotes.exchange}
+    </>
   );
 }
 
 Ticker.propTypes = {
-  quotes: PropTypes.array
+  quotes: PropTypes.array.isRequired
 };
 
 export default Ticker;
