@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Header from '../../components/app/header/Header';
+// import AlpacaForm from '../../components/forms/AlpacaForm';
 // import News from '../../components/app/news/News';
 import UserPagePositions from '../../containers/UserPaperPositions';
 // import Search from '../../components/app/search/Search';
@@ -9,7 +10,7 @@ function Home() {
   return (
     <div>
       <Header />
-
+      {/* <AlpacaForm /> */}
       <UserPagePositions />
     </div>
   );

@@ -16,10 +16,10 @@ export const newSide = (side) => ({
   payload: side,
 });
 
-export const TYPE = 'TYPE';
-export const newType = (type) => ({
-  type: TYPE,
-  payload: type,
+export const ORDER = 'ORDER';
+export const newOrder = (order) => ({
+  type: ORDER,
+  payload: order,
 });
 
 export const TIMEINFORCE = 'TIMEINFORCE';

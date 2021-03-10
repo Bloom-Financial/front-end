@@ -1,10 +1,16 @@
-import { SYMBOL, QTY, SIDE, TYPE, TIMEINFORCE } from '../actions/alpacaActions';
+import {
+  SYMBOL,
+  QTY,
+  SIDE,
+  ORDER,
+  TIMEINFORCE,
+} from '../actions/alpacaActions';
 
 export const initialState = {
   symbol: '',
   qty: '',
   side: 'buy',
-  type: 'market',
+  order: 'market',
   timeInForce: 'day',
 };
 
@@ -25,10 +31,10 @@ export default function alpacaReducer(state, action) {
         ...state,
         side: action.payload,
       };
-    case TYPE:
+    case ORDER:
       return {
         ...state,
-        type: action.payload,
+        order: action.payload,
       };
     case TIMEINFORCE:
       return {

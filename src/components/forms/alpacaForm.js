@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { requestNewPaperOrder } from '../../services/alpacaOrders';
 
-function AlpacaForm({ symbol, qty, side, type, timeInForce }) {
+function AlpacaForm({ symbol, qty, side, order, timeInForce }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     requestNewPaperOrder(e.target.value);
@@ -17,7 +17,7 @@ function AlpacaForm({ symbol, qty, side, type, timeInForce }) {
           <option value="buy">Buy</option>
           <option value="sell">Sell</option>
         </select>
-        <select value={type}>
+        <select value={order}>
           <option value="market">Market</option>
           <option value="limit">Limit</option>
           <option value="stop">Stop</option>
@@ -35,9 +35,9 @@ function AlpacaForm({ symbol, qty, side, type, timeInForce }) {
 
 AlpacaForm.propTypes = {
   symbol: PropTypes.string.isRequired,
-  qty: PropTypes.string.isRequired,
+  qty: PropTypes.number.isRequired,
   side: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
+  order: PropTypes.string.isRequired,
   timeInForce: PropTypes.string.isRequired,
 };
 
