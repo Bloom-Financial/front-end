@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { requestNewPaperOrder } from '../../services/alpacaOrders';
 
 function AlpacaForm({ symbol, qty, side, type, timeInForce }) {
   const handleSubmit = (e) => {
-    e.target.value;
+    e.preventDefault();
+    requestNewPaperOrder(e.target.value);
   };
 
   return (
