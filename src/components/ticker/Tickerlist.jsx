@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Ticker from './Ticker';
 
-function Tickerlist({ quotes }) {
-  // console.log(quotes);
+function Tickerlist({  quotes }) {
+
+  console.log(quotes);
   const quoteElements = quotes.map((quote) => (
-    <li key={quote.quote}>
+    // console.log(quote)
+    <li key={quote.symbol}>
       <Ticker 
-        quotes={quote.quote}
+        quotes={quote}
       />
     </li>
   ));
