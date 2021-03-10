@@ -15,7 +15,7 @@ function Home({ location }) {
   return (
     <div>
       <Header />
-      <News />
+      {/* <News /> */}
       <UserPagePositions />
     </div>
   );
