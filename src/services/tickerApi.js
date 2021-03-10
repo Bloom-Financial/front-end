@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-export const getFetch = () => {
+export const getTicker = () => {
 
   return fetch('https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete?q=tesla&region=US', {
     'method': 'GET',
@@ -11,3 +11,5 @@ export const getFetch = () => {
     .then(response => response.json())
     .catch(err => console.error(err));
 };
+
+

@@ -10,7 +10,7 @@ export default function LoginPage() {
       <button 
         className={styles.logButton} 
         onClick={redirectToAlpaca}>
-          C o n t i n u e
+          Continue to login
       </button>
     </div>
   );
