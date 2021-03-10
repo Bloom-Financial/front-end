@@ -1,45 +1,17 @@
 import {
-  SYMBOL,
-  QTY,
-  SIDE,
-  ORDER,
-  TIMEINFORCE,
+  PAPERPOSITIONS,
 } from '../actions/alpacaActions';
 
 export const initialState = {
-  symbol: '',
-  qty: '',
-  side: 'buy',
-  order: 'market',
-  timeInForce: 'day',
+  paperPositions: []
 };
 
 export default function alpacaReducer(state, action) {
   switch (action.type) {
-    case SYMBOL:
+    case PAPERPOSITIONS:
       return {
         ...state,
-        symbol: action.payload,
-      };
-    case QTY:
-      return {
-        ...state,
-        qty: action.payload,
-      };
-    case SIDE:
-      return {
-        ...state,
-        side: action.payload,
-      };
-    case ORDER:
-      return {
-        ...state,
-        order: action.payload,
-      };
-    case TIMEINFORCE:
-      return {
-        ...state,
-        timeInForce: action.payload,
+        paperPositions: action.payload
       };
     default:
       return state;
