@@ -1,11 +1,7 @@
 /* eslint-disable max-len */
 export const getFetch = () => {
 
-<<<<<<< HEAD
-  return fetch('https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-chart?interval=5m&symbol=SLB&range=1d&region=US', {
-=======
-  return  await fetch('https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete?q=tesla, amzn, s&p&region=US', {
->>>>>>> 6e88edb88874455718bdc72d20c29a2bf89ccaad
+  return fetch('https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete?q=tesla, amzn, s&p&region=US', {
     'method': 'GET',
     'headers': {
       'x-rapidapi-key': 'ea5b728cb8msh5828bd90eda5c7fp16706ejsnf48fb58ce6f6',
