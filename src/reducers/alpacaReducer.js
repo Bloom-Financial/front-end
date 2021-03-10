@@ -7,7 +7,7 @@ export const initialState = {
 };
 
 export default function alpacaReducer(state, action) {
-  switch (action.type) {
+  switch(action.type) {
     case PAPERPOSITIONS:
       return {
         ...state,
