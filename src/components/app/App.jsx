@@ -13,8 +13,6 @@ function App() {
           <Switch>
             <Route exact path="/" component={LoginPage} />
             <Route path="/home" component={Home} />
-          
-            
           </Switch>
         </AlpacaProvider>
       </AuthProvider>
