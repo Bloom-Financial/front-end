@@ -10,7 +10,8 @@ export const findArticles = (search) => {
       articles.map((article) => ({
         title: article.title,
         url: article.url,
-        image: article.urlToImage,
+        description: article.description,
+        img: article.urlToImage
       }))
     );
 };

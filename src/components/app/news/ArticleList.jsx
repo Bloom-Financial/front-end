@@ -24,9 +24,10 @@ ArticleList.propTypes = {
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
-      image: PropTypes.string,
+      description: PropTypes.string.isRequired,
+      img: PropTypes.string
     })
-  ).isRequired,
+  ).isRequired
 };
 
 export default ArticleList;
