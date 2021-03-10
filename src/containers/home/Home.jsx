@@ -7,23 +7,14 @@ import Header from '../../components/app/header/Header';
 import News from '../../components/app/news/News';
 
 import UserPagePositions from '../../containers/UserPaperPositions';
-// import Ticker from '../../components/app/ticker/Ticker';
-// import { useParams } from 'react-router-dom';
+import styles from './home.css';
 
 function Home() {
   return (
     <div>
-      <Header />
-      {/* <AlpacaForm /> */}
-
-function Home() {
-
-
-  return (
-    <div>
-      <Header />
-      {/* <News /> */}
-      <UserPagePositions />
+      <Header className={styles.Header}/>
+      <News className={styles.News}/>
+      <UserPagePositions className={styles.Holdings}/>
     </div>
   );
 }
