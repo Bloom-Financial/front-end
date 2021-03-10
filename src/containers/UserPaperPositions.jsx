@@ -15,13 +15,13 @@ function UserPaperPositions() {
   const accessToken = useAccessToken();
 
   useEffect(() => {
-    if (!accessToken) return;
+    if(!accessToken) return;
     getUserPaperPositions(accessToken).then((res) => {
       dispatch(newPaperPosition(res)), setLoading(false);
     });
   }, [accessToken]);
 
-  if (loading) return <h1>Loading...</h1>;
+  if(loading) return <h1>Loading...</h1>;
   return (
     <>
       <AlpacaForm />
