@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ArticleList from './ArticleList';
 import Search from './Search';
 import { findArticles } from '../../../services/newsApi';
+import style from './search.css';
 
 export default class News extends Component {
   state = {
@@ -32,7 +33,10 @@ export default class News extends Component {
 
     return (
       <>
-        <Search search={search} onChange={this.handleSearch} />
+        <Search 
+          className={style.search} 
+          search={search} 
+          onChange={this.handleSearch} />
         {loading && <h1>Loading</h1>}
         <ArticleList articles={articles} />
       </>

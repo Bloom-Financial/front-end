@@ -6,7 +6,7 @@ const ArticleList = ({ articles }) => {
   if(articles.length < 1) return <h1>Make a search....</h1>;
 
   const articleElements = articles.map((article) => (
-    <li key={article.title}>
+    <li key={article.url}>
       <Article {...article} />
     </li>
   ));
@@ -24,10 +24,10 @@ ArticleList.propTypes = {
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
+      description: PropTypes.string,
       img: PropTypes.string
     })
-  ).isRequired
+  ).isRequired,
 };
 
 export default ArticleList;

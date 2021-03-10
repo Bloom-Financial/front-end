@@ -18,7 +18,12 @@ exports[`Test the user paper positions component tests the user paper positions 
     <h2
       class="value"
     >
-      Market Value: 
+      Market Value:
+    </h2>
+    <h2
+      class="price"
+    >
+      Current Price:
     </h2>
   </dd>
 </DocumentFragment>

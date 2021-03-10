@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import AlpacaForm from './AlpacaForm';
 
 
-describe('alpaca form', () => {
+describe.skip('alpaca form', () => {
   it('tests the alpaca form component', () => {
     const { asFragment } = render(<AlpacaForm/>);
     expect(asFragment()).toMatchSnapshot();
