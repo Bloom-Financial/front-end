@@ -3,6 +3,7 @@ import Header from '../../components/app/header/Header';
 import News from '../../components/app/news/News';
 import UserPagePositions from '../../containers/UserPaperPositions';
 import styles from './home.css';
+
 function Home() {
   return (
     <div>
