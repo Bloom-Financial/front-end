@@ -1,23 +1,44 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { requestNewPaperOrder } from '../../services/alpacaOrders';
 
-function AlpacaForm({ symbol, quantity, side }) {
+function AlpacaForm({ symbol, qty, side, order, timeInForce }) {
   const handleSubmit = (e) => {
-    e.target.value;
+    e.preventDefault();
+    requestNewPaperOrder(e.target.value);
   };
 
   return (
     <div>
       <form>
-        <input value={symbol} placeholder="symbol" type="text"/>
-        <input value={quantity} placeholder="quantity" type="number"/>
+        <input value={symbol} placeholder="symbol" type="text" />
+        <input value={qty} placeholder="qty" type="number" />
         <select value={side}>
           <option value="buy">Buy</option>
           <option value="sell">Sell</option>
-        </select> 
+        </select>
+        <select value={order}>
+          <option value="market">Market</option>
+          <option value="limit">Limit</option>
+          <option value="stop">Stop</option>
+          <option value="stopLimit">Stop Limit</option>
+        </select>
+        <select value={timeInForce}>
+          <option value="day">Day</option>
+          <option value="onClose">On Close</option>
+        </select>
         <button onSubmit={handleSubmit}>Submit</button>
       </form>
     </div>
   );
 }
+
+AlpacaForm.propTypes = {
+  symbol: PropTypes.string.isRequired,
+  qty: PropTypes.number.isRequired,
+  side: PropTypes.string.isRequired,
+  order: PropTypes.string.isRequired,
+  timeInForce: PropTypes.string.isRequired,
+};
 
 export default AlpacaForm;
