@@ -1,20 +1,22 @@
-import { useState } from 'react';
-import alpacaReducer from '../reducers/alpacaReducer';
-const { symbol, qty, side, order, timeInForce } = useState(alpacaReducer());
+import { getAllAlpaca } from '../selectors/alpacaSelector';
+import { useSelector } from '../state/AlpacaProvider';
 
-export const requestNewPaperOrder = (accessToken) => {
+export const requestNewPaperOrder = (accessToken, alpacaData) => {
+  
+  const { symbol, qty, side, order, timeInForce } = alpacaData;
+
   return fetch('https://paper-api.alpaca.markets/v2/orders', {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${accessToken}`,
     },
-    body: {
+    body: JSON.stringify({
       symbol: `${symbol}`,
       qty: `${qty}`,
       side: `${side}`,
       type: `${order}`,
       time_in_force: `${timeInForce}`,
-    },
+    }),
   })
     .then((res) => res.json())
     .catch((err) => {
