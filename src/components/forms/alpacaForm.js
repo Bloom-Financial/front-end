@@ -1,44 +1,69 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+/* eslint-disable max-len */
+import React, { useState } from 'react';
 import { requestNewPaperOrder } from '../../services/alpacaOrders';
+import { useAccessToken } from '../../state/authProvider';
+import { 
+  newPaperPosition
+} from '../../actions/alpacaActions';
+import { useDispatch } from '../../state/AlpacaProvider';
+import { getUserPaperPositions } from '../../services/alpacaGetUserPortfolioAPI';
 
-function AlpacaForm({ symbol, qty, side, order, timeInForce }) {
+function AlpacaForm() {
+  const dispatch = useDispatch();
+  const accessToken = useAccessToken();
+
+  const [symbol, setSymbol] = useState('');
+  const [qty, setQty] = useState('');
+  const [side, setSide] = useState('buy');
+  const [order, setOrder] = useState('market');
+  const [timeInForce, setTimeInForce] = useState('day');
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    requestNewPaperOrder(e.target.value);
+    const alpacaData = {
+      symbol,
+      qty,
+      side,
+      order,
+      timeInForce
+    };
+    requestNewPaperOrder(accessToken, alpacaData)
+      .then(() => getUserPaperPositions(accessToken))
+      .then(res => dispatch(newPaperPosition(res)));
   };
+
+  console.log(symbol,
+    qty,
+    side,
+    order,
+    timeInForce);
 
   return (
     <div>
       <form>
-        <input value={symbol} placeholder="symbol" type="text" />
-        <input value={qty} placeholder="qty" type="number" />
-        <select value={side}>
+        <input onChange={e => setSymbol(e.target.value)} />
+        <input onChange={e => setQty(e.target.value)} />
+        <select onChange={e => setSide(e.target.value)}>
           <option value="buy">Buy</option>
           <option value="sell">Sell</option>
         </select>
-        <select value={order}>
+        <select onChange={e => setOrder(e.target.value)}>
           <option value="market">Market</option>
           <option value="limit">Limit</option>
           <option value="stop">Stop</option>
-          <option value="stopLimit">Stop Limit</option>
         </select>
-        <select value={timeInForce}>
+        <select onChange={e => setTimeInForce(e.target.value)}>
           <option value="day">Day</option>
-          <option value="onClose">On Close</option>
+          <option value="gtc">Good Until Canceled</option>
+          <option value="opg">Market On Open</option>
+          <option value="cls">Market On Close</option>
+          <option value="ioc">Immediate Or Cancel</option>
+          <option value="fok">Fill Or Kill</option>
         </select>
-        <button onSubmit={handleSubmit}>Submit</button>
+        <button onClick={handleSubmit}>Submit</button>
       </form>
     </div>
   );
 }
-
-AlpacaForm.propTypes = {
-  symbol: PropTypes.string.isRequired,
-  qty: PropTypes.number.isRequired,
-  side: PropTypes.string.isRequired,
-  order: PropTypes.string.isRequired,
-  timeInForce: PropTypes.string.isRequired,
-};
 
 export default AlpacaForm;
