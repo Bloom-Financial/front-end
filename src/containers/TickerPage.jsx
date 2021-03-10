@@ -5,8 +5,8 @@ import { getFetch } from '../services/tickerApi';
 const TickerPage = () => {
   const [quotes, setQuotes] = useState([]);
 
-  useEffect(async() => {
-    await getFetch()
+  useEffect(() => {
+    getFetch()
       .then((quotes) => {
         setQuotes(quotes);
       });
