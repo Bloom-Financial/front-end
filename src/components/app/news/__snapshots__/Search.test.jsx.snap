@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the search component tests the search component 1`] = `
+<DocumentFragment>
+  <input
+    placeholder="Search here..."
+    type="text"
+    value="help"
+  />
+</DocumentFragment>
+`;

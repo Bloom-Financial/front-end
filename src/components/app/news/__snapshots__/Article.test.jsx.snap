@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the Article component tests the Article component 1`] = `
+<DocumentFragment>
+  <a>
+    <figure
+      class="articleContainer"
+    >
+      <h3
+        class="articleTitle"
+      />
+      <img
+        class="articleImg"
+      />
+      <p
+        class="articleDesc"
+      />
+    </figure>
+  </a>
+</DocumentFragment>
+`;

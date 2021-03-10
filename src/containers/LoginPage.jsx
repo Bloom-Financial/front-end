@@ -6,7 +6,7 @@ export default function LoginPage() {
   const redirectToAlpaca = useAlpacaRedirect();
 
   return (
-    <div className={styles.log}>
+    <div data-testid="alpaca"className={styles.log}>
       <button 
         className={styles.logButton} 
         onClick={redirectToAlpaca}>

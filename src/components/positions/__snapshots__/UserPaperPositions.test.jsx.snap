@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the user paper positions component tests the user paper positions component 1`] = `
+<DocumentFragment>
+  <dd
+    class="container"
+  >
+    <h1
+      class="symbol"
+    >
+      Stock: 
+    </h1>
+    <h2
+      class="qty"
+    >
+      Qty: 
+    </h2>
+    <h2
+      class="value"
+    >
+      Market Value:
+    </h2>
+    <h2
+      class="price"
+    >
+      Current Price:
+    </h2>
+  </dd>
+</DocumentFragment>
+`;

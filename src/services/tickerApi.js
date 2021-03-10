@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
-export const getTicker = () => {
+export const getFetch = async() => {
 
-  return fetch('https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete?q=tesla&region=US', {
+  return  await fetch('https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete?q=tesla&region=US', {
     'method': 'GET',
     'headers': {
       'x-rapidapi-key': 'ccceef234dmsh9ec59b335a8b015p16f78ejsn109ac55c5fb8',
