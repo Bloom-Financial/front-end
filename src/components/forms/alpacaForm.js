@@ -32,6 +32,12 @@ function AlpacaForm() {
       .then(res => dispatch(newPaperPosition(res)));
   };
 
+  console.log(symbol,
+    qty,
+    side,
+    order,
+    timeInForce);
+
   return (
     <div>
       <form>
