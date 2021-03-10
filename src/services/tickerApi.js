@@ -11,3 +11,5 @@ export const getFetch = async() => {
     .then(response => response.json())
     .catch(err => console.error(err));
 };
+
+
