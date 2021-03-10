@@ -4,6 +4,7 @@ import authReducer, { initialState } from '../reducers/authReducer';
 
 const AuthContext = React.createContext(null);
 
+// eslint-disable-next-line react/prop-types
 export const AuthProvider = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, initialState);
   const [accessToken, setAccessToken] = useState('');
@@ -11,7 +12,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
-    if (code) {
+    if(code) {
       fetch('http://localhost:7890/api/v1/auth/token', {
         method: 'Post',
         headers: { 'content-type': 'application/json' },

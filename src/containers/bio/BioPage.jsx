@@ -1,5 +1,7 @@
+/* eslint-disable max-len */
 import React from 'react';
-import Sarah from '../../../src/sarah.jpg';
+import Sarah from './sarah.jpg';
+import Ryan from './ryan.jpg';
 import Linkedin from './linkedinlogo.png';
 import Twitter from './twitterlogo.png';
 import GitHub from './githubicon.png';
@@ -47,9 +49,27 @@ export default function BioPage() {
           />
         </a>
       </span>
-      <h1></h1>
-      <p></p>
-      <img></img>
+
+      <span>
+        <h1>Ryan Carreras</h1>
+        <p>A software engineer who loves finding simple solutions to complex problems, working with a team towards a shared goal, and Stonks. Always love those stonks!
+        </p>
+        <img src={Ryan} height="170px"></img>
+        <a href="https://www.linkedin.com/in/ryancarreras/">
+          <img className="linkedinlogo"
+            alt="linkedinlogo" src={Linkedin} 
+            height="25px" width="25px" />
+        </a>
+        <a href="https://twitter.com/@ryanleviathan">
+          <img className="twitterlogo" alt="twitterlogo"
+            src={Twitter} height="25px" width="25px" />
+        </a>
+        <a href="https://github.com/ryanleviathan">
+          <img className="githublogo" alt="githublogo" 
+            src={GitHub} height="27px" width="27px" />
+        </a>
+      </span>
+
       <span>
         <h1>Ethan Pierce</h1>
         <p>Let us make some money!!</p>
