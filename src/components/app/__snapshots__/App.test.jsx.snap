@@ -9,7 +9,7 @@ exports[`App component renders App 1`] = `
     <button
       class="logButton"
     >
-      C o n t i n u e
+      Continue to login
     </button>
   </div>
 </DocumentFragment>
