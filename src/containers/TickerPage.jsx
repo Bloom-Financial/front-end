@@ -13,6 +13,7 @@ const TickerPage = () => {
   }, []);
 
   return (
+    // <div>hey</div>
     <Tickerlist quotes={quotes}/>
   );
 

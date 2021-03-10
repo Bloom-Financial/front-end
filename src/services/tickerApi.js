@@ -9,7 +9,13 @@ export const getFetch = async() => {
     }
   })
     .then(response => response.json())
+    .then(({ quotes }) => quotes.map(quote => ({
+      symbol: quote.symbol,
+      exchange: quote.exchange,
+    })))
     .catch(err => console.error(err));
+     
 };
 
 
+//  
