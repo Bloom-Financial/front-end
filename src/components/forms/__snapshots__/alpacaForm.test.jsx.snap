@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`alpaca form tests the alpaca form component 1`] = `
+<DocumentFragment>
+  <div>
+    <form>
+      <input
+        placeholder="symbol"
+        type="text"
+        value=""
+      />
+      <input
+        placeholder="quantity"
+        type="number"
+        value=""
+      />
+      <select>
+        <option
+          value="buy"
+        >
+          Buy
+        </option>
+        <option
+          value="sell"
+        >
+          Sell
+        </option>
+      </select>
+      <button>
+        Submit
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`alpaca form tests the header component 1`] = `
+<DocumentFragment>
+  <div>
+    <form>
+      <input
+        placeholder="symbol"
+        type="text"
+        value=""
+      />
+      <input
+        placeholder="quantity"
+        type="number"
+        value=""
+      />
+      <select>
+        <option
+          value="buy"
+        >
+          Buy
+        </option>
+        <option
+          value="sell"
+        >
+          Sell
+        </option>
+      </select>
+      <button>
+        Submit
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;

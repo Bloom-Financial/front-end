@@ -10,10 +10,10 @@ const UserPaperPositionList = ({ paperPositions }) => {
     </li>
   ));
   return (
-    <>
+    <div data-testid="paper">
       <h1 className={styles.title}>Your Positions:</h1>
       <ul>{paperPositionElements}</ul>
-    </>
+    </div>
   );
 };
 

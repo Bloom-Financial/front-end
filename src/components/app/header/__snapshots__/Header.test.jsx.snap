@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the header component tests the header component 1`] = `
+<DocumentFragment>
+  <form>
+    <label
+      for="username"
+    >
+      Enter username
+    </label>
+    <input
+      id="username"
+      type="text"
+    />
+    <button>
+      Update Profile
+    </button>
+  </form>
+  <button>
+    log out
+  </button>
+</DocumentFragment>
+`;

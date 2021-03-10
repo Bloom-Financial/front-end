@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the ticker component tests the ticker component 1`] = `
+<DocumentFragment>
+  <div />
+</DocumentFragment>
+`;
