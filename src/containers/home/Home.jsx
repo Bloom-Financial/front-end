@@ -8,10 +8,10 @@ import styles from './home.css';
 function Home() {
   return (
     <div>
-      <Header className={styles.Header}/>
-      <News className={styles.News}/>
+      <Header className={styles.Header} />
+      <UserPagePositions className={styles.Holdings} />
+      <News className={styles.News} />
       {/* <TickerPage className={styles.Ticker} /> */}
-      <UserPagePositions className={styles.Holdings}/>
     </div>
   );
 }

@@ -24,7 +24,8 @@ export default class News extends Component {
 
   handleSearch = ({ target }) => {
     this.setState({ search: target.value }, () => {
-      this.fetchArticles();
+      console.log(this.state.search);
+      this.fetchArticles(this.state.search.replace(/\s/g, ''));
     });
   };
 
@@ -33,10 +34,11 @@ export default class News extends Component {
 
     return (
       <>
-        <Search 
-          className={style.search} 
-          search={search} 
-          onChange={this.handleSearch} />
+        <Search
+          className={style.search}
+          search={search}
+          onChange={this.handleSearch}
+        />
         {loading && <h1>Loading</h1>}
         <ArticleList articles={articles} />
       </>
