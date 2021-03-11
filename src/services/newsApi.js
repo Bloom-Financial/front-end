@@ -1,5 +1,5 @@
 export const findArticles = (search) => {
-  return fetch(`http://localhost:7891/news&q=${search}`)
+  return fetch(`https://mysterious-basin-06930.herokuapp.com/news?q=${search}`)
     .then((res) => res.json())
     .then(({ articles }) =>
       articles.map((article) => ({
