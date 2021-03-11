@@ -6,7 +6,6 @@ import Linkedin from './linkedinlogo.png';
 import Twitter from './twitterlogo.png';
 import GitHub from './githubicon.png';
 import Ethan from './Ethan.jpg';
-import Ray from './Ray.jpg';
 
 export default function BioPage() {
   return (
@@ -102,26 +101,6 @@ export default function BioPage() {
             height="27px"
             width="27px"
           />
-        </a>
-      </span>
-      <span>
-        <h1>Ray Sakultarawattn</h1>
-        <p>A full-stack software developer who loves to get down and dirty with code, and turn it into
-          awesome things that help humans!
-        </p>
-        <img src={Ray} height="170px"></img>
-        <a href="https://www.linkedin.com/in/raysakultarawattn/">
-          <img className="linkedinlogo"
-            alt="linkedinlogo" src={Linkedin} 
-            height="25px" width="25px" />
-        </a>
-        <a href="https://twitter.com/@rsakultarawattn">
-          <img className="twitterlogo" alt="twitterlogo"
-            src={Twitter} height="25px" width="25px" />
-        </a>
-        <a href="https://github.com/rsakultarawattn">
-          <img className="githublogo" alt="githublogo" 
-            src={GitHub} height="27px" width="27px" />
         </a>
       </span>
     </>
