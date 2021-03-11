@@ -11,7 +11,7 @@ function Home() {
       <Header className={styles.Header} />
       <UserPagePositions className={styles.Holdings} />
       <News className={styles.News} />
-      {/* <TickerPage className={styles.Ticker} /> */}
+      <TickerPage className={styles.Ticker} />
     </div>
   );
 }

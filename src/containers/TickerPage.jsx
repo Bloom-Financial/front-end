@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Tickerlist from '../components/ticker/Tickerlist';
+import Ticker from '../components/ticker/Ticker';
 import { getFetch } from '../services/tickerApi';
 
 const TickerPage = () => {
@@ -11,10 +11,11 @@ const TickerPage = () => {
         setQuotes(quotes);
       });
   }, []);
-
+  
   return (
-    // <div>hey</div>
-    <Tickerlist quotes={quotes}/>
+    
+    <Ticker {...quotes}/>
+    
   );
 
 };

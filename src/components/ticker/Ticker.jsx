@@ -1,19 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Ticker({ quotes }) {
+function Ticker({ symbol, regularMarketPrice, previousClose }) {
+  console.log(symbol, 'slb')
   return (
     <>
-      {    quotes.symbol   }
-    
-      {quotes.exchange}
+      {symbol}
+      {previousClose}
+      {regularMarketPrice}
     </>
   );
 }
 
-Ticker.propTypes = {
-  quotes: PropTypes.array.isRequired
-};
+// Ticker.propTypes = {
+//   quotes: PropTypes.array.isRequired
+// };
 
 export default Ticker;
 
