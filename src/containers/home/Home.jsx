@@ -6,7 +6,7 @@ import Header from '../../components/app/header/Header';
 //import News from '../../components/app/news/News';
 
 import UserPagePositions from '../../containers/UserPaperPositions';
-import TickerPage from '../TickerPage';
+// import TickerPage from '../TickerPage';
 import styles from './home.css';
 
 function Home() {
