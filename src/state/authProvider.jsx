@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
     const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
     if (code) {
-      fetch('http://localhost:7890/api/v1/auth/token', {
+      fetch('https://mysterious-basin-06930.herokuapp.com/api/v1/auth/token', {
         method: 'Post',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ code }),
