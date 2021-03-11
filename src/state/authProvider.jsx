@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
   const redirectToAlpaca = () => {
     // eslint-disable-next-line max-len
     window.location =
-      'https://app.alpaca.markets/oauth/authorize?response_type=code&client_id=edb6dea4ea1d646cd3bb3f82667f33df&redirect_uri=https://mysterious-basin-06930.herokuapp.com/api/v1/auth&scope=account:write%20trading';
+      'https://app.alpaca.markets/oauth/authorize?response_type=code&client_id=edb6dea4ea1d646cd3bb3f82667f33df&redirect_uri=https://ecstatic-lovelace-d92939.netlify.app/home&scope=account:write%20trading';
   };
   return (
     <AuthContext.Provider
