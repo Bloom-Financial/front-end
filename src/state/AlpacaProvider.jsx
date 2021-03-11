@@ -3,6 +3,7 @@ import alpacaReducer, { initialState } from '../reducers/alpacaReducer';
 
 const AlpacaContext = createContext(null);
 
+// eslint-disable-next-line react/prop-types
 export const AlpacaProvider = ({ children }) => {
   const [state, dispatch] = useReducer(alpacaReducer, initialState);
 

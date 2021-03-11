@@ -4,7 +4,7 @@ export const getFetch = async() => {
   return  await fetch('https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete?q=tesla, amzn, s&p&region=US', {
     'method': 'GET',
     'headers': {
-      'x-rapidapi-key': 'ccceef234dmsh9ec59b335a8b015p16f78ejsn109ac55c5fb8',
+      'x-rapidapi-key': `${process.env.TICKER_API_KEY}`,
       'x-rapidapi-host': 'apidojo-yahoo-finance-v1.p.rapidapi.com'
     }
   })
