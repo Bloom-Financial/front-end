@@ -10,8 +10,8 @@ function Home() {
     <div>
       <Header className={styles.Header} />
       <UserPagePositions className={styles.Holdings} />
-      {/* <News className={styles.News} /> */}
-      <TickerPage className={styles.Ticker} />
+      <News className={styles.News} />
+      {/* <TickerPage className={styles.Ticker} /> */}
     </div>
   );
 }
