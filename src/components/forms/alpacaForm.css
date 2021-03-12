@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 1px;
+}
+
+.h2 {
+  margin-right: 5px;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 1px;
+  color: seashell;
+}
+
+.forms {
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 1px;
+}

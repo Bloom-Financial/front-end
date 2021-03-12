@@ -3,7 +3,9 @@
 exports[`Test the search component tests the search component 1`] = `
 <DocumentFragment>
   <input
+    class="search"
     placeholder="Search here..."
+    style="height: 2vh; width: 10vw;"
     type="text"
     value="help"
   />

@@ -1,34 +1,20 @@
-import React, { useState } from 'react';
-import { createUser } from '../../../services/userApi';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './Header.css';
+import TickerPage from '../../../containers/TickerPage';
 
 const Header = () => {
-  const [username, setUsername] = useState('');
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    createUser().then((username) => {
-      setUsername(username);
-    });
-  };
-  console.log(username);
-
-  const handleLogOut = () => {
-    window.location.assign('/');
-    setUsername('');
-  };
-
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Enter username</label>
-        <input
-          id="username"
-          type="text"
-          onChange={({ target }) => setUsername(target.value)}
-        />
-        <button>Update Profile</button>
-      </form>
-      <button onClick={handleLogOut}>log out</button>
+      <div className={styles.header}>
+        <Link to="/bio">
+          <h1 className={styles.BioLink}>Creators</h1>
+        </Link>
+        <TickerPage />
+        <Link to="/">
+          <h1 className={styles.LogOut}>Log Out</h1>
+        </Link>
+      </div>
     </>
   );
 };

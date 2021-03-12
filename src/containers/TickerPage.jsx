@@ -1,21 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import Tickerlist from '../components/ticker/Tickerlist';
-import { getFetch } from '../services/tickerApi';
+import Ticker from '../components/ticker/Ticker';
+import { getAll } from '../services/tickerApi';
 
 const TickerPage = () => {
   const [quotes, setQuotes] = useState([]);
+  const symbols = [
+    'AAPL',
+    'MSFT',
+    'AMZN',
+    'TSLA',
+    'FB'
+  ];
 
   useEffect(() => {
-    getFetch()
+    getAll(symbols)
       .then((quotes) => {
         setQuotes(quotes);
       });
   }, []);
-
+  const tickerList = quotes.map(quote => (
+    <li key={quote}><Ticker {...quote}/></li>
+  ));
   return (
-    // <div>hey</div>
-    <Tickerlist quotes={quotes}/>
+    <ul style={{ display: 'flex' }}>{tickerList}</ul>
   );
-
 };
 export default TickerPage;

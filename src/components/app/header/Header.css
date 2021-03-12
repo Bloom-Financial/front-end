@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 3px inset #e1f4ea;
+}
+
+.BioLink {
+  font-family: 'Fjalla One', sans-serif;
+  color: seashell;
+  letter-spacing: 1px;
+}
+
+.LogOut {
+  font-family: 'Fjalla One', sans-serif;
+  color: seashell;
+  letter-spacing: 1px;
+}

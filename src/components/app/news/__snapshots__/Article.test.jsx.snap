@@ -2,20 +2,21 @@
 
 exports[`Test the Article component tests the Article component 1`] = `
 <DocumentFragment>
-  <a>
-    <figure
-      class="articleContainer"
-    >
+  <figure
+    class="articleContainer"
+  >
+    <a>
       <h3
         class="articleTitle"
       />
-      <img
-        class="articleImg"
-      />
-      <p
-        class="articleDesc"
-      />
-    </figure>
-  </a>
+       
+    </a>
+    <img
+      class="articleImg"
+    />
+    <p
+      class="articleDesc"
+    />
+  </figure>
 </DocumentFragment>
 `;
