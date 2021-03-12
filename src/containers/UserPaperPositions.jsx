@@ -24,7 +24,7 @@ function UserPaperPositions() {
   if(loading) return <h1>Loading...</h1>;
   return (
     <>
-      <AlpacaForm />
+      <AlpacaForm accessToken={accessToken}/>
       <UserPaperPositionList accessToken={accessToken} paperPositions={paperPositions} />
     </>
   );
