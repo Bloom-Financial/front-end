@@ -1,0 +1,31 @@
+.BioContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #174141;
+  color: seashell;
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+}
+
+.Person {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  border-bottom: 3px inset #e1f4ea;
+}
+
+.links {
+  padding-bottom: 10px;
+}
+
+.linkedin {
+  padding-right: 10px;
+}
+
+.twitter {
+  padding-right: 10px;
+}
