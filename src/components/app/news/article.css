@@ -1,6 +1,13 @@
-.articleTitle { grid-area: title; }
-.articleImg { grid-area: img; }
-.articleDes { grid-area: description; }
+.articleTitle {
+  grid-area: title;
+  text-decoration: none;
+}
+.articleImg {
+  grid-area: img;
+}
+.articleDes {
+  grid-area: description;
+}
 
 .articleContainer {
   display: grid;
@@ -13,12 +20,16 @@
   grid-gap: 5px;
   padding: 5px;
   width: 500px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: aliceblue;
+  border-bottom: 3px inset #e1f4ea;
 }
 
 .articleImg {
+  position: relative;
+  top: -10vh;
   padding-top: 20px;
   padding-right: 5px;
-  width:200px;
+  width: 200px;
 }
