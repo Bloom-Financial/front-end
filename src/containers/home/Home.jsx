@@ -6,6 +6,7 @@ import TickerPage from '../TickerPage';
 import styles from './home.css';
 import TickerWidget from '../../components/TickerWidget';
 
+
 function Home() {
   return (
     <div>
