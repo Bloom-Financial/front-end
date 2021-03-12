@@ -4,9 +4,16 @@ import { getAll } from '../services/tickerApi';
 
 const TickerPage = () => {
   const [quotes, setQuotes] = useState([]);
+  const symbols = [
+    'AAPL',
+    'MSFT',
+    'AMZN',
+    'TSLA',
+    'FB'
+  ];
 
   useEffect(() => {
-    getAll()
+    getAll(symbols)
       .then((quotes) => {
         setQuotes(quotes);
       });

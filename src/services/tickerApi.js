@@ -18,15 +18,8 @@ export const getFetch = (symbol) => {
     .catch(err => console.error(err));
 };
 
-const symbols = [
-  'AAPL',
-  'MSFT',
-  'AMZN',
-  'TSLA',
-  'FB'
-];
 // breaks @ 5 symbols
-export const getAll = () => {  
+export const getAll = (symbols) => {  
   return Promise.all(symbols.map(symbol => getFetch(symbol)))
     .then(res => res.flat());
 };
