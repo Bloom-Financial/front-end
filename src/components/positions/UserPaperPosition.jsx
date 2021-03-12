@@ -4,10 +4,10 @@ import styles from './UserPaperPosition.css';
 
 const UserPaperPosition = ({ symbol, qty, market_value, current_price }) => (
   <dd className={styles.container}>
-    <h1 className={styles.symbol}>Stock: {symbol}</h1>
-    <h2 className={styles.qty}>Qty: {qty}</h2>
-    <h2 className={styles.value}>Market Value:{market_value}</h2>
-    <h2 className={styles.price}>Current Price:{current_price}</h2>
+    <a className={styles.symbol}>Stock: {symbol}</a>
+    <a className={styles.qty}>Qty: {qty}</a>
+    <a className={styles.value}>Market Value: {market_value}</a>
+    <a className={styles.price}>Current Price: {current_price}</a>
   </dd>
 );
 

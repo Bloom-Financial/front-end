@@ -9,10 +9,10 @@ import TickerWidget from '../../components/TickerWidget';
 function Home() {
   return (
     <div>
-      <Header className={styles.Header} />
+      <Header />
+      <UserPagePositions />
       <TickerWidget />
-      <UserPagePositions className={styles.Holdings} />
-      <News className={styles.News} />
+      <News />
     </div>
   );
 }
