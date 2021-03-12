@@ -21,7 +21,7 @@ export default function BioPage() {
           <h2>Sarah Skillen</h2>
           <img src={Sarah} height="170px"></img>
           <p>
-            A software engineer who enjoys solving problems by testing the functions and feels that investing your money should be availble to everyone!
+            A software engineer who enjoys solving problems by testing the functions and feels that investing your money should be available to everyone!
           </p>
           <div className={styles.links}>
             <a 
@@ -92,7 +92,7 @@ export default function BioPage() {
           <h2>Ethan Pierce</h2>
           <img src={Ethan} height="170px"></img>
           <p>
-            Let us make some money!!
+            A full stack Javascript engineer who loves to create, fix bugs and discuss new and interesting ideas.
           </p>
           <div className={styles.links}>
             <a className={styles.linkedin} 
@@ -131,7 +131,7 @@ export default function BioPage() {
           <h2>Ray Sakultarawattn</h2>
           <img src={Ray} height="170px"></img>
           <p>
-            A full-stack software developer who loves to get down and dirty with code, and turn it into awesome things that help humans!
+            A full-stack software developer who loves to write efficient code, and turn it into awesome things that help humans!
           </p>
           <div className={styles.links}>
             <a className={styles.linkedin} 

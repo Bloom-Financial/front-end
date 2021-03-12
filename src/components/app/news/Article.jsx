@@ -6,7 +6,7 @@ const Article = ({ title, url, description, img }) => (
   <>
     <figure className={style.articleContainer}>
       <a href={url}>
-        <h3 className={style.articleTitle}>{title}</h3>{' '}
+        <h3 className={style.articleTitle}>{title}</h3>
       </a>
       <img className={style.articleImg} src={img} alt={title} />
       <p className={style.articleDesc}>{description}</p>

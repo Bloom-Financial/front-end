@@ -17,3 +17,11 @@ li {
   letter-spacing: 1px;
   align-items: left;
 }
+
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-bottom: 3px inset #e1f4ea;
+}
