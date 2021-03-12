@@ -1,0 +1,10 @@
+.Ticker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Fjalla One', sans-serif;
+  color: seashell;
+  letter-spacing: 1px;
+  padding: 5px;
+}

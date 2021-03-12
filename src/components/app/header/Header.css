@@ -1,17 +1,16 @@
-header {
-  position: fixed;
-  top: 0;
-  height: 70px;
-  background-color: rgb(197, 178, 178);
-  width: 100%;
+.header {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  box-shadow: 1px 1px 1px 1px rgba(116, 110, 110, 0.199);
+  justify-content: space-between;
 }
+
 .BioLink {
   font-family: 'Fjalla One', sans-serif;
-  font-size: 4rem;
-  position: absolute;
-  right: 10vw;
+  color: seashell;
+  letter-spacing: 1px;
+}
+
+.LogOut {
+  font-family: 'Fjalla One', sans-serif;
+  color: seashell;
+  letter-spacing: 1px;
 }
