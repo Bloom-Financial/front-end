@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { createUser } from '../../../services/userApi';
+import styles from './Header.css';
 
 const Header = () => {
   const [username, setUsername] = useState('');
@@ -19,6 +21,9 @@ const Header = () => {
 
   return (
     <>
+      <Link to="/bio">
+        <p className={styles.BioLink}>Creators</p>
+      </Link>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Enter username</label>
         <input

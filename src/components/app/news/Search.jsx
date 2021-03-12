@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import style from './Search.css';
 
 const Search = ({ search, onChange }) => (
   <input
-    // className={}
+    style={{ height: '2vh', width: '10vw' }}
+    className={style.search}
     type="text"
     placeholder="Search here..."
     value={search}
