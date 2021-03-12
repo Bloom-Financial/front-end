@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Article from './Article';
+import styles from './ArticleList.css';
 
 const ArticleList = ({ articles }) => {
   if (articles.length < 1) return <h1>Make a search....</h1>;
@@ -13,7 +14,9 @@ const ArticleList = ({ articles }) => {
 
   return (
     // add className={insert styles}
-    <ul data-testid="articles">{articleElements}</ul>
+    <ul 
+      className={styles.Container} data-testid="articles">{articleElements}
+    </ul>
   );
 };
 

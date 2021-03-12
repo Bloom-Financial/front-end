@@ -6,13 +6,13 @@
   grid-template-areas:
     "Header Header Header"
     "Ticker Ticker Ticker"
-    "Bot-Activity News Holdings";
+    "tickerWidget News Holdings";
 }
 
 
 .Header { grid-area: Header; }
 .Ticker { grid-area: Ticker; }
-.Bot-Activity { grid-area: Bot-Activity; }
+.TickerWidget { grid-area: TickerWidget; }
 .News { grid-area: News; }
 .Holdings { grid-area: Holdings; }
 
