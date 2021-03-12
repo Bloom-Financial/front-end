@@ -1,12 +1,23 @@
 body {
     background-color: #174141;
-    height: 1080px;
-    width: 1920px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 .log {
  background-image: url("/src/assets/landingbg.png");
+ margin-bottom: 20%;
 }
+
 .logButton {
-    background-color: #174141;
-    border: none;
+    margin-left: 47%;
+    margin-top: 38%;
+    height: 75px;
+    width: 160px;
+    font-size: 1.2em;
+    box-shadow: 3px 3px black;
+    background-color: rgb(28, 122, 107);
+    border-radius: 50%;
+    font-weight: bold;
+    text-shadow: 1px 1px gray;
+    font-style: oblique;
 }
