@@ -78,6 +78,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 600px;
+  margin-left: 40px;
   font-family: 'Fjalla One', sans-serif;
   font-size: 20rem;
   letter-spacing: 30px;
@@ -94,6 +95,8 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: -10%;
+  margin-left: 2%;
+
   letter-spacing: 25px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
