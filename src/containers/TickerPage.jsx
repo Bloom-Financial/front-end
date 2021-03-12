@@ -22,7 +22,7 @@ const TickerPage = () => {
     <li key={quote}><Ticker {...quote}/></li>
   ));
   return (
-    <ul>{tickerList}</ul>
+    <ul style={{ display: 'flex' }}>{tickerList}</ul>
   );
 };
 export default TickerPage;
