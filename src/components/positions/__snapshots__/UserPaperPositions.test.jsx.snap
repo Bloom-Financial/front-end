@@ -5,26 +5,26 @@ exports[`Test the user paper positions component tests the user paper positions 
   <dd
     class="container"
   >
-    <h1
+    <a
       class="symbol"
     >
       Stock: 
-    </h1>
-    <h2
+    </a>
+    <a
       class="qty"
     >
       Qty: 
-    </h2>
-    <h2
+    </a>
+    <a
       class="value"
     >
-      Market Value:
-    </h2>
-    <h2
+      Market Value: 
+    </a>
+    <a
       class="price"
     >
-      Current Price:
-    </h2>
+      Current Price: 
+    </a>
   </dd>
 </DocumentFragment>
 `;

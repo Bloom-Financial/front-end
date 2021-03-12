@@ -6,11 +6,24 @@ exports[`App component renders App 1`] = `
     class="log"
     data-testid="alpaca"
   >
-    <button
-      class="logButton"
+    <h1
+      class="title"
     >
-      Continue to login
-    </button>
+      BLOOM
+    </h1>
+    <h3
+      class="motto"
+    >
+      BREAKING LIMITS ON OUR MONEY
+    </h3>
+    <h3
+      class="est"
+    >
+      est. 2021
+    </h3>
+    <p>
+      CLICK TO LOGIN
+    </p>
   </div>
 </DocumentFragment>
 `;
