@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Sarah from './sarah.jpg';
 import Ryan from './ryan.jpg';
 import Linkedin from './linkedinlogo.png';
@@ -12,9 +13,12 @@ import styles from './BioPage.css';
 export default function BioPage() {
   return (
     <>
+      <Link to="/home">
+        <h1 className={styles.link}>Portfolio</h1>
+      </Link>
       <div className={styles.BioContainer}>
         <span className={styles.Person}>
-          <h1>Sarah Skillen</h1>
+          <h2>Sarah Skillen</h2>
           <img src={Sarah} height="170px"></img>
           <p>
             A software engineer who enjoys solving problems by testing the functions and feels that investing your money should be availble to everyone!
@@ -54,7 +58,7 @@ export default function BioPage() {
           </div>
         </span>
         <span className={styles.Person}>
-          <h1>Ryan Carreras</h1>
+          <h2>Ryan Carreras</h2>
           <img src={Ryan} height="170px"></img>
           <p>
             A software engineer who loves finding simple solutions to complex problems, working with a team towards a shared goal, and Stonks. Always love those stonks!
@@ -85,7 +89,7 @@ export default function BioPage() {
           </div>
         </span>
         <span className={styles.Person}>
-          <h1>Ethan Pierce</h1>
+          <h2>Ethan Pierce</h2>
           <img src={Ethan} height="170px"></img>
           <p>
             Let us make some money!!
@@ -124,7 +128,7 @@ export default function BioPage() {
           </div>
         </span>
         <span className={styles.Person}>
-          <h1>Ray Sakultarawattn</h1>
+          <h2>Ray Sakultarawattn</h2>
           <img src={Ray} height="170px"></img>
           <p>
             A full-stack software developer who loves to get down and dirty with code, and turn it into awesome things that help humans!
