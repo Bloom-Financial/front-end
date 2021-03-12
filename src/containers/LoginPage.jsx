@@ -10,7 +10,7 @@ export default function LoginPage() {
       <h1 className={styles.title}>BLOOM</h1>
       <h3 className={styles.motto}>BREAKING LIMITS ON OUR MONEY</h3>
       <h3 className={styles.est}>est. 2021</h3>
-      <p>CLICK TO LOGIN</p>
+      <p className={styles.login}>CLICK TO LOGIN</p>
     </div>
   );
 }
