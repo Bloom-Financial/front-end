@@ -6,8 +6,12 @@
 }
 
 .input {
-    background-color: green;
-    color: seashell;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
     font-family: 'Fjalla One', sans-serif;
     letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }

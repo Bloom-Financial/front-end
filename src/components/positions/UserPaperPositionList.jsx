@@ -10,7 +10,7 @@ const UserPaperPositionList = ({ paperPositions }) => {
     </li>
   ));
   return (
-    <div data-testid="paper">
+    <div className={styles.portfolio} data-testid="paper">
       <h1 className={styles.title}>My Portfolio:</h1>
       <ul className={styles.ul}>{paperPositionElements}</ul>
     </div>

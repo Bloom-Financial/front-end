@@ -34,14 +34,16 @@ export default class News extends Component {
 
     return (
       <>
-        <h2 className={style.searchTitle}>STOCK NEWS SEARCH</h2>
-        <Search
-          className={style.search}
-          search={search}
-          onChange={this.handleSearch}
-        />
-        {loading && <h1>Loading</h1>}
-        <ArticleList articles={articles} />
+        <div className={style.articles}>
+          <h2 className={style.searchTitle}>STOCK NEWS SEARCH</h2>
+          <Search
+            className={style.search}
+            search={search}
+            onChange={this.handleSearch}
+          />
+          {loading && <h1>Loading</h1>}
+          <ArticleList articles={articles} />
+        </div>
       </>
     );
   }
