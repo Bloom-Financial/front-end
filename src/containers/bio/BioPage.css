@@ -1,0 +1,43 @@
+.BioContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #174141;
+  color: seashell;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 1px;
+}
+
+.Person {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  text-align: center;
+  border-bottom: 3px inset #e1f4ea;
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: seashell;
+  text-shadow: 1px 1px #174141;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 1px;
+}
+
+.links {
+  padding-bottom: 10px;
+}
+
+.linkedin {
+  padding-right: 10px;
+}
+
+.twitter {
+  padding-right: 10px;
+}
