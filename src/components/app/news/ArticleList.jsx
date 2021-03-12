@@ -13,9 +13,8 @@ const ArticleList = ({ articles }) => {
   ));
 
   return (
-    // add className={insert styles}
-    <ul 
-      className={styles.Container} data-testid="articles">{articleElements}
+    <ul className={styles.Container} data-testid="articles">
+      {articleElements}
     </ul>
   );
 };

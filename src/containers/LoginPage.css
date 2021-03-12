@@ -15,20 +15,14 @@ body {
   background-attachment: fixed;
   background-position: 50% 5%;
   background-size: 750px;
-<<<<<<< HEAD
-=======
   cursor: pointer;
->>>>>>> 367e34fcc8fc15051b6b521357991cb1d2e5fe3c
 }
 .title {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 600px;
-<<<<<<< HEAD
-=======
   margin-left: 40px;
->>>>>>> 367e34fcc8fc15051b6b521357991cb1d2e5fe3c
   font-family: 'Fjalla One', sans-serif;
   font-size: 20rem;
   letter-spacing: 30px;
@@ -45,11 +39,8 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: -10%;
-<<<<<<< HEAD
-=======
   margin-left: 2%;
 
->>>>>>> 367e34fcc8fc15051b6b521357991cb1d2e5fe3c
   letter-spacing: 25px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -69,16 +60,6 @@ body {
 
 .login {
   font-family: 'Fjalla One', sans-serif;
-<<<<<<< HEAD
-  color: #ffffff;
-  margin-left: 1090px;
-  margin-bottom: -1250px;
-  font-size: 6rem;
-  padding: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-=======
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,5 +137,4 @@ body {
     font-size: 2rem;
     color: seashell;
   }
->>>>>>> 367e34fcc8fc15051b6b521357991cb1d2e5fe3c
 }

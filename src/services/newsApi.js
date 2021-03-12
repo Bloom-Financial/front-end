@@ -1,5 +1,5 @@
 export const findArticles = (search) => {
-  return fetch(`http://localhost:7890/news?q=${search}
+  return fetch(`https://bloom-financial-group.herokuapp.com/news?q=${search}
   `)
     .then((res) => res.json())
     .then(({ articles }) =>

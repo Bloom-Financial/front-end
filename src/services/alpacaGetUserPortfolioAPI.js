@@ -24,5 +24,3 @@ export const getAssetsByStockName = (stock) => {
       console.error(err);
     });
 };
-//  'APCA-API-KEY-ID': 'PKCMVVTLMUA016H9WEG5',
-//     'APCA-API-SECRET-KEY': 'CQVgOScXGPdpDjeoFR9z79PuHNRur5B4gAL4Bjmr',
