@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
-    if (code) {
+    if(code) {
       fetch('https://bloom-financial-group.herokuapp.com/api/v1/auth/token', {
         method: 'Post',
         headers: { 'content-type': 'application/json' },

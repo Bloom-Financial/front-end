@@ -4,7 +4,7 @@ import Article from './Article';
 import styles from './ArticleList.css';
 
 const ArticleList = ({ articles }) => {
-  if (articles.length < 1) return <h1>Make a search....</h1>;
+  if(articles.length < 1) return <h1>Make a search....</h1>;
 
   const articleElements = articles.map((article) => (
     <li key={article.url}>
