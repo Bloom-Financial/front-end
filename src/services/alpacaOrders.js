@@ -1,5 +1,4 @@
 export const requestNewPaperOrder = (accessToken, alpacaData) => {
-  
   const { symbol, qty, side, order, timeInForce } = alpacaData;
 
   return fetch('https://paper-api.alpaca.markets/v2/orders', {
