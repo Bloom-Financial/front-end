@@ -11,10 +11,9 @@ function Home() {
     <div>
       <Header className={styles.Header} />
       <TickerWidget />
+      <TickerPage className={styles.Ticker} />
       <UserPagePositions className={styles.Holdings} />
       <News className={styles.News} />
-      <TickerPage className={styles.Ticker} />
-      
     </div>
   );
 }
