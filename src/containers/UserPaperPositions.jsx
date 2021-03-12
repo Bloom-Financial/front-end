@@ -25,7 +25,7 @@ function UserPaperPositions() {
   return (
     <>
       <AlpacaForm />
-      <UserPaperPositionList paperPositions={paperPositions} />
+      <UserPaperPositionList accessToken={accessToken} paperPositions={paperPositions} />
     </>
   );
 }
