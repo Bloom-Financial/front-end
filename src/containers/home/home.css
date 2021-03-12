@@ -8,8 +8,11 @@
     "Ticker Ticker Ticker"
     "tickerWidget News Holdings";
 }
+
+
 .Header { grid-area: Header; }
 .Ticker { grid-area: Ticker; }
 .TickerWidget { grid-area: TickerWidget; }
 .News { grid-area: News; }
 .Holdings { grid-area: Holdings; }
+
