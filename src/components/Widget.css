@@ -1,4 +1,17 @@
-.widget {
-    height: 100;
-    width: 100;
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }

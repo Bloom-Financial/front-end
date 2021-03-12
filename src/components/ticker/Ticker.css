@@ -1,11 +1,9 @@
-.container {
+.Ticker {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-  text-align: center;
-  border-radius: 5px;
-  color: seashell;
   font-family: 'Fjalla One', sans-serif;
+  color: seashell;
   letter-spacing: 1px;
+  padding-left: 30px;
 }
