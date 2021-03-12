@@ -34,8 +34,6 @@ function AlpacaForm() {
       .then((res) => dispatch(newPaperPosition(res)));
   };
 
-  console.log(symbol, qty, side, order, timeInForce);
-
   return (
     <div>
       <form className={styles.form}>
@@ -46,20 +44,30 @@ function AlpacaForm() {
           onInput={toInputUppercase}
           placeholder="Stock Symbol..."
         />
-        <input 
-          className={styles.forms} 
-          onChange={(e) => setQty(e.target.value)} 
-          placeholder="Quantity..."/>
-        <select className={styles.forms} onChange={(e) => setSide(e.target.value)}>
+        <input
+          className={styles.forms}
+          onChange={(e) => setQty(e.target.value)}
+          placeholder="Quantity..."
+        />
+        <select
+          className={styles.forms}
+          onChange={(e) => setSide(e.target.value)}
+        >
           <option value="buy">Buy</option>
           <option value="sell">Sell</option>
         </select>
-        <select className={styles.forms} onChange={(e) => setOrder(e.target.value)}>
+        <select
+          className={styles.forms}
+          onChange={(e) => setOrder(e.target.value)}
+        >
           <option value="market">Market</option>
           <option value="limit">Limit</option>
           <option value="stop">Stop</option>
         </select>
-        <select className={styles.forms} onChange={(e) => setTimeInForce(e.target.value)}>
+        <select
+          className={styles.forms}
+          onChange={(e) => setTimeInForce(e.target.value)}
+        >
           <option value="day">Day</option>
           <option value="gtc">Good Until Canceled</option>
           <option value="opg">Market On Open</option>
@@ -67,7 +75,9 @@ function AlpacaForm() {
           <option value="ioc">Immediate Or Cancel</option>
           <option value="fok">Fill Or Kill</option>
         </select>
-        <button className={styles.forms} onClick={handleSubmit}>Submit</button>
+        <button className={styles.forms} onClick={handleSubmit}>
+          Submit
+        </button>
       </form>
     </div>
   );
