@@ -60,7 +60,10 @@
   }
 } */
 body {
-  background-color: #112929;
+   background-color: #112929;
+}
+.log {
+   
   background-image: linear-gradient(#174141, #174213);
 
   background-image: url('/src/assets/tree.png');
@@ -71,8 +74,8 @@ body {
   background-attachment: fixed;
   background-position: 50% 5%;
   background-size: 750px;
-}
 
+}
 .title {
   display: flex;
   justify-content: center;
