@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ArticleList from './ArticleList';
 import Search from './Search';
 import { findArticles } from '../../../services/newsApi';
-import style from './search.css';
+import style from './News.css';
 
 export default class News extends Component {
   state = {
@@ -34,6 +34,7 @@ export default class News extends Component {
 
     return (
       <>
+        <h2 className={style.searchTitle}>STOCK NEWS SEARCH</h2>
         <Search
           className={style.search}
           search={search}

@@ -1,0 +1,12 @@
+.searchTitle {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  color: #ffffff;
+  /* position: relative;
+  top: 10vh;
+  left: 10vw; */
+  color: #ffffff;
+  text-shadow: #474747 3px 5px 2px;
+  color: #ffffff;
+}
