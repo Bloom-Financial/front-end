@@ -17,7 +17,8 @@ export default function TickerWidget() {
       </select>
       <input 
         className={styles.input} 
-        onChange={e => setSymbol(e.target.value)}/>
+        onChange={e => setSymbol(e.target.value)}
+        placeholder="Stock Symbol..."/>
       <Widget className={styles.widget} symbol={`${market}:${symbol}`} /> 
 
     </div>

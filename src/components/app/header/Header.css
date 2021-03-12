@@ -1,6 +1,7 @@
 .header {
   display: flex;
   justify-content: space-around;
+  border-bottom: 3px inset #e1f4ea;
 }
 
 .BioLink {

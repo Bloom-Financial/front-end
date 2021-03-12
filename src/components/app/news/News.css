@@ -1,12 +1,21 @@
-.searchTitle {
+.articles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: seashell;
   font-family: 'Fjalla One', sans-serif;
-  font-size: 2rem;
-  letter-spacing: 5px;
-  color: #ffffff;
-  /* position: relative;
-  top: 10vh;
-  left: 10vw; */
-  color: #ffffff;
-  text-shadow: #474747 3px 5px 2px;
-  color: #ffffff;
+  letter-spacing: 1px;
+  border-bottom: 3px inset #e1f4ea;
+}
+
+.searchTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: seashell;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 1px;
+  border-top: 3px inset #e1f4ea;
+  width: 100%;
 }
