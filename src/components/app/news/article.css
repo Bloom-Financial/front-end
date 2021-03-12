@@ -20,9 +20,8 @@
   grid-gap: 5px;
   padding: 5px;
   width: 500px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: aliceblue;
+  font-family: 'Fjalla One', sans-serif;
+  color: seashell;
   border-bottom: 3px inset #e1f4ea;
 }
 

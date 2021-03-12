@@ -1,4 +1,13 @@
-.widget {
-    height: 100;
-    width: 100;
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input {
+    background-color: green;
+    color: seashell;
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 1px;
 }
