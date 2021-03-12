@@ -10,7 +10,7 @@ const Header = () => {
         <Link to="/bio">
           <h1 className={styles.BioLink}>Creators</h1>
         </Link>
-        <TickerPage />
+        {/* <TickerPage /> */}
         <Link to="/">
           <h1 className={styles.LogOut}>Log Out</h1>
         </Link>
