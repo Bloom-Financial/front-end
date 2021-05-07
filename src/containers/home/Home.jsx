@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../components/app/header/Header';
 import News from '../../components/app/news/News';
 import UserPagePositions from '../../containers/UserPaperPositions';
-import TickerWidget from '../../components/TickerWidget';
+// import TickerWidget from '../../components/TickerWidget';
 
 
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
     <div>
       <Header />
       <UserPagePositions />
-      <TickerWidget />
+      {/* <TickerWidget /> */}
       <News />
     </div>
   );
